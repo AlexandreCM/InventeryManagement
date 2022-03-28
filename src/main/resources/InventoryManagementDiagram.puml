@@ -1,0 +1,25 @@
+@startuml Inventory Management Diagram
+!define DARKBLUE
+!includeurl https://raw.githubusercontent.com/Drakemor/RedDress-PlantUML/master/style.puml
+
+' 1 step: item in Storage
+entity Item {
+    id: int
+    name: String
+    getTotal(): int
+    whereIsStore(): List<Storage>
+}
+
+class StorageDetail {
+    quantity: int
+}
+
+entity Storage {
+    id: int
+    name: String
+    getItems(): List<Item>
+}
+
+Item "1" -- "0..*" StorageDetail
+StorageDetail "0..*" -- "1" Storage
+@enduml
