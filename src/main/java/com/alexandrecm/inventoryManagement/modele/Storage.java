@@ -8,27 +8,27 @@ import javax.persistence.Id;
 @Entity
 public class Storage {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    int id;
-    String name;
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  int id;
 
-    public Storage() {
-    }
+  String name;
 
-    public int getId() {
-        return id;
-    }
+  public Storage() {}
 
-    public void setId(int id) {
-        this.id = id;
-    }
+  public int getId() {
+    return id;
+  }
 
-    public String getName() {
-        return name;
-    }
+  public void setId(int id) {
+    this.id = id;
+  }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
 }
